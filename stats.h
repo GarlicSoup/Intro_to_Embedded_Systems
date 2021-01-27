@@ -17,7 +17,7 @@
  */
 #ifndef __STATS_H__
 #define __STATS_H__
- 
+
 
 /**
  * @brief print statistics of an array including minimum, maximum, 
@@ -48,7 +48,7 @@ void print_array(unsigned char arr[], int array_length);
  * 
  * @return median value of the array
  */ 
-float find_median(unsigned char arr[], int array_length);
+int find_median(unsigned char arr[], int array_length);
 
 
 /**
@@ -59,7 +59,7 @@ float find_median(unsigned char arr[], int array_length);
  * 
  * @return mean value of the array
  */ 
-float find_mean(unsigned char arr[], int array_length);
+int find_mean(unsigned char arr[], int array_length);
 
 
 /**
@@ -128,6 +128,5 @@ void heapify_min(unsigned char arr[], int array_length, int root);
  * @return a sorted array
  */ 
 void sort_array(unsigned char array[], int array_length);
-
 
 #endif /* __STATS_H__ */

@@ -146,18 +146,18 @@ unsigned char find_maximum(unsigned char arr[], int array_length) {
   return arr[0];
 }
 
-float find_mean(unsigned char arr[], int array_length) {
+int find_mean(unsigned char arr[], int array_length) {
   int sum=0;
 
   // Get the sumation of words
   for (int i=0; i<array_length; i++) {
-    sum += i;
+    sum += arr[i];
   }
-  return (float) sum/array_length;
+  return sum/array_length;
 }
 
-float find_median(unsigned char arr[], int array_length) {
-  float median=0;
+int find_median(unsigned char arr[], int array_length) {
+  int median=0;
 
   if (array_length % 2 != 0) {
     // There are an odd number of words
@@ -165,7 +165,7 @@ float find_median(unsigned char arr[], int array_length) {
   }
   else {
     // there are an even number of words
-    median = (float)(arr[(array_length-1)/2] + arr[(array_length-1)/2 + 1]) / 2;
+    median = (arr[array_length/2] + arr[array_length/2 - 1]) / 2;
   }
   return median;
 }
@@ -175,8 +175,8 @@ void print_statistics(unsigned char arr[], int array_length) {
   float mean, median;
   unsigned char maximum, minimum;
 
-  printf("\nThe mean of the array: %f\n", find_mean(arr, array_length));
-  printf("The median of the array: %f\n", find_median(arr, array_length));
+  printf("\nThe mean of the array: %d\n", find_mean(arr, array_length));
+  printf("The median of the array: %d\n", find_median(arr, array_length));
   printf("The minimum of the array: %d\n", find_minimum(arr, array_length));
   printf("The maximum of the array: %d\n", find_maximum(arr, array_length));
 }
