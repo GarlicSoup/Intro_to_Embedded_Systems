@@ -17,7 +17,7 @@
  */
 #ifndef __STATS_H__
 #define __STATS_H__
-
+ 
 
 /**
  * @brief print statistics of an array including minimum, maximum, 
@@ -128,5 +128,6 @@ void heapify_min(unsigned char arr[], int array_length, int root);
  * @return a sorted array
  */ 
 void sort_array(unsigned char array[], int array_length);
+
 
 #endif /* __STATS_H__ */
